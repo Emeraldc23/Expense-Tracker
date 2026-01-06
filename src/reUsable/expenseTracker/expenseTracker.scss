@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+
+  .cardContent {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.formContainer {
+  border: 1px solid #2222;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .amt {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .radio-div {
+      display: flex;
+      flex-direction: row;
+      .purpose {
+        display: flex;
+        gap: 5px;
+      }
+    }
+    .submit-btn {
+      padding: 5px 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex-wrap: wrap;
+  }
+}
