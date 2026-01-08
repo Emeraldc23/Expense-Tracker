@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { expenseDetails } from "../../../data/expenseTracker";
 import "../expenseTracker/expenseTracker.scss";
 import { useAddTransaction } from "../../Hooks/useAddTransactions";
@@ -11,16 +11,11 @@ const ExpenseTracker = () => {
     category: "",
   });
 
-  const [balance, setBalance] = useState({
-    bal: 0,
-    balIncom: 0,
-    balExp: 0,
-  });
-
   const [transactionPurpose, setTransactionPurpose] = useState("");
   const { addTransaction } = useAddTransaction();
-  const { transaction } = useGetTransaction();
+  const { transaction, totalTransaction } = useGetTransaction();
 
+  const { bal, income, expense } = totalTransaction;
   function increaseBalance() {
     const amount = Number(value.amount);
     setBalance((prev) => {
@@ -60,9 +55,11 @@ const ExpenseTracker = () => {
       description: "",
       category: "",
     });
+    const updateBalance = increaseBalance(transactionPurpose, amount);
     setTransactionPurpose("");
     increaseBalance();
   }
+
   return (
     <div className="expenseTracker">
       <div className="card">
@@ -77,7 +74,7 @@ const ExpenseTracker = () => {
                 </span>
               </div>
               <div className="transaction">
-                <h4>{`$ ${balance[cardItem.key]}`}</h4>
+                <h4>{`$ ${totalTransaction[cardItem.key]}`}</h4>
               </div>
             </div>
           );

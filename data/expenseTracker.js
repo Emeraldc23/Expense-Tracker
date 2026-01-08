@@ -7,13 +7,13 @@ export const expenseDetails = [
     title: "Total Expenses",
     icon: AttachMoneyOutlinedIcon,
 
-    key: "balExp",
+    key: "expense",
   },
   {
     title: "Total Income",
     icon: AccountBalanceWalletOutlinedIcon,
 
-    key: "balIncom",
+    key: "income",
   },
   { title: "My Balance", icon: TrendingUpOutlinedIcon, key: "bal" },
 ];

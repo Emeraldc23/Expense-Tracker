@@ -1,3 +1,5 @@
+.expenseTracker {
+}
 .card {
   display: flex;
   justify-content: center;
@@ -53,6 +55,20 @@
   }
 }
 
+.transaction {
+  margin: 20px 0;
+  ul {
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    li {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
 @media screen and (max-width: 600px) {
   .card {
     flex-wrap: wrap;
