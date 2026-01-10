@@ -3,6 +3,8 @@ import { signInWithPopup } from "firebase/auth";
 import "../Auth/auth.scss";
 import { useNavigate } from "react-router-dom";
 import GoogleIcon from "../../googleIcon";
+import expenseLogo from "../../assets/expense-logo.png";
+import expenseBg from "../../assets/expenseBg.jpg";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -21,7 +23,18 @@ const Auth = () => {
   return (
     <main className="auth-page">
       <div className="auth-content">
-        <p className="para-1">Sign In With Google to Continue</p>
+        <div className="hero-section">
+          <div className="img">
+            <img src={expenseLogo} alt="" />
+          </div>
+
+          <p className="welcomeMsg">Welcome to</p>
+          <h4>Emerald Inifinity</h4>
+          <p className="msg">
+            A place where you track all your expenses and incomes...
+          </p>
+        </div>
+        <p className="para-1">Let's get started...</p>
         <button className="btn sign-in-btn" onClick={handleSignIn}>
           <span className="logo">
             <GoogleIcon />

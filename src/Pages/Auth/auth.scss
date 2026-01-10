@@ -1,13 +1,11 @@
 .auth-page {
   width: 100%;
   min-height: 100vh;
-  background: green;
-  background: linear-gradient(
-    to right,
-    rgb(25, 229, 236) 0%,
-    rgb(18, 230, 230) 45%,
-    rgb(126, 5, 206) 90%
-  );
+  background: wheat;
+  background-image: url("../../assets/expenseBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,21 +14,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .para-1 {
-      margin: 10px 0;
+    .hero-section {
       color: #fff;
+      margin-bottom: 30px;
+      font-size: 25px;
+      text-align: center;
+      .img {
+        display: flex;
+        justify-content: center;
+        background-color: grey;
+        align-items: center;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px;
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+      h4 {
+        font-size: 32px;
+        color: rgb(194, 241, 194);
+      }
+      .msg {
+        line-height: 1.2;
+      }
+    }
+    .para-1 {
+      margin: 20px 0;
+      color: white;
       font-weight: 700;
       font-size: 2rem;
     }
     .sign-in-btn {
-      color: #000;
-      background: #fff;
+      color: #fff;
+      background: transparent;
       padding: 2px 10px;
       font-size: 1rem;
       font-weight: 600;
       display: flex;
+      border-radius: 20px;
       align-items: center;
+      border: 0.5px solid grey;
       justify-content: center;
+      cursor: pointer;
       gap: 10px;
       .logo {
         padding: 5px 0;
@@ -41,17 +69,41 @@
 
 @media screen and (max-width: 600px) {
   .auth-page {
-    background: linear-gradient(
-      to right,
-      rgb(9, 129, 129) 45%,
-      rgb(126, 5, 206) 90%
-    );
     .auth-content {
+      .hero-section {
+        color: #fff;
+        margin-bottom: 30px;
+        font-size: 25px;
+        text-align: center;
+        .img {
+          display: flex;
+          justify-content: center;
+          background-color: grey;
+          align-items: center;
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          margin: 0 auto 20px;
+          img {
+            width: 120px;
+            height: 120px;
+          }
+        }
+        h4 {
+          font-size: 32px;
+          color: rgb(194, 241, 194);
+          margin: 5px 0;
+        }
+        .msg {
+          line-height: 1.2;
+        }
+      }
       .para-1 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
       .sign-in-btn {
-        font-size: 0.8rem;
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
       }
     }
   }
